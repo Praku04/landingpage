@@ -57,12 +57,12 @@
         bottom: var(--space-sm); 
         left: 50%; 
         transform: translateX(-50%);
-        width: calc(100% - 32px);
+        width: calc(100% - 24px);
         max-width: 100%;
     }
     .bottom-nav-container { 
-        padding: var(--space-xs) var(--space-sm); 
-        gap: 2px; 
+        padding: 6px 12px; 
+        gap: 4px; 
         overflow-x: auto; 
         -webkit-overflow-scrolling: touch; 
         scrollbar-width: none; 
@@ -73,11 +73,13 @@
     .bottom-nav-container::-webkit-scrollbar { display: none; }
     .bottom-nav-container::before { display: none; }
     .nav-link { 
-        padding: var(--space-sm) var(--space-md); 
+        padding: 8px 12px; 
         font-size: 11px; 
         flex-shrink: 0; 
         border-radius: 20px;
         scroll-snap-align: center;
+        white-space: nowrap;
+        min-width: auto;
     }
     
     /* About */
@@ -96,13 +98,51 @@
     .roadmap-cta, .colleges-cta { padding: var(--space-lg); }
     .cta-text { font-size: 16px; }
     
-    /* Testimonials */
-    .testimonials-wrapper { flex-direction: column; }
-    .carousel-btn { display: none; }
-    .testimonial-card { flex: 0 0 100%; padding: var(--space-lg); }
-    .testimonials-track { gap: var(--space-md); }
-    .testimonial-text { font-size: 14px; }
-    .author-avatar { width: 40px; height: 40px; }
+    /* Testimonials - Mobile Responsive */
+    .testimonials-wrapper { 
+        flex-direction: column; 
+        gap: 0;
+    }
+    
+    .carousel-btn { 
+        display: none; 
+    }
+    
+    .testimonials-carousel {
+        width: 100%;
+        overflow: visible;
+        padding: 0;
+    }
+    
+    .testimonials-track { 
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        transform: none !important;
+        width: 100%;
+    }
+    
+    .testimonial-card { 
+        flex: 0 0 auto;
+        width: 100% !important;
+        max-width: 100%;
+        padding: var(--space-lg);
+        margin: 0;
+    }
+    
+    .testimonial-text { 
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .author-avatar { 
+        width: 40px; 
+        height: 40px; 
+    }
+    
+    .carousel-dots {
+        display: none;
+    }
     
     /* Colleges - Full Width Cards on Mobile */
     .colleges {
@@ -235,7 +275,21 @@
         display: block;
         padding: 0 var(--space-md) var(--space-md);
     }
-    .nav-link { padding: 8px 12px; font-size: 10px; white-space: nowrap; }
+    .nav-link { 
+        padding: 6px 10px; 
+        font-size: 10px; 
+        white-space: nowrap;
+        min-width: auto;
+    }
+    
+    .bottom-nav {
+        width: calc(100% - 16px);
+    }
+    
+    .bottom-nav-container {
+        padding: 4px 8px;
+        gap: 2px;
+    }
     .modal-content { margin: var(--space-xs); }
     .modal-header { padding: var(--space-lg) var(--space-md) var(--space-sm); }
     .modal-header::before { font-size: 28px; }
@@ -420,6 +474,29 @@
 
 /* Small Mobile - Extra Adjustments */
 @media (max-width: 480px) {
+    /* Testimonials - Small Mobile */
+    .testimonial-card {
+        padding: var(--space-md) !important;
+    }
+    
+    .testimonial-text {
+        font-size: 13px !important;
+    }
+    
+    .testimonial-author h4 {
+        font-size: 14px;
+    }
+    
+    .testimonial-author p {
+        font-size: 12px;
+    }
+    
+    .author-avatar {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    /* Form */
     .form-slides-container {
         padding: var(--space-md) var(--space-sm);
         padding-top: 70px;
