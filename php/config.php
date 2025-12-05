@@ -19,9 +19,9 @@
 // DATABASE SETTINGS
 // ========================================
 define('DB_HOST', 'localhost');          // Database host (usually localhost)
-define('DB_NAME', 'management_gurus');   // Database name
-define('DB_USER', 'root');               // Database username
-define('DB_PASS', '');                   // Database password
+define('DB_NAME', 'u112004868_gurus');   // Database name
+define('DB_USER', 'u112004868_pikachu_guru');               // Database username
+define('DB_PASS', 'Metasploit@8080');                   // Database password
 define('DB_CHARSET', 'utf8mb4');         // Character set
 
 // ========================================
