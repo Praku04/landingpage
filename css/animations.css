@@ -455,10 +455,9 @@
     box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
 }
 
-/* College Card Hover Effect */
+/* College Card Hover Effect - Updated */
 .college-card:hover .college-logo {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 /* CTA Button Shine Effect */

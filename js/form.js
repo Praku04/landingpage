@@ -69,11 +69,15 @@
             question: "Perfect! What's the best phone number to reach you?",
             field: 'phone',
             type: 'tel',
-            placeholder: '+91 98765 43210',
+            placeholder: '9876543210',
             validation: (value) => {
                 const phoneDigits = value.replace(/[^0-9]/g, '');
-                if (!phoneDigits || phoneDigits.length < 10 || phoneDigits.length > 15) {
-                    return 'Please enter a valid phone number (10-15 digits)';
+                if (!phoneDigits || phoneDigits.length !== 10) {
+                    return 'Please enter a valid 10-digit phone number';
+                }
+                // Check if it starts with valid Indian mobile prefix (6-9)
+                if (phoneDigits[0] < '6' || phoneDigits[0] > '9') {
+                    return 'Phone number should start with 6, 7, 8, or 9';
                 }
                 return null;
             }
@@ -274,18 +278,36 @@
                 body: submitData
             });
             
-            const result = await response.json();
-            
             // Remove loading slide
             const loadingSlide = slidesContainer.querySelector('.loading-slide');
             if (loadingSlide) {
                 loadingSlide.remove();
             }
             
+            // Check if response is ok
+            if (!response.ok) {
+                console.error('Server error:', response.status, response.statusText);
+                showErrorSlide(`Server error: ${response.status}`);
+                return;
+            }
+            
+            // Try to parse JSON
+            let result;
+            try {
+                result = await response.json();
+            } catch (parseError) {
+                console.error('JSON parse error:', parseError);
+                const text = await response.text();
+                console.error('Response text:', text);
+                showErrorSlide('Invalid server response');
+                return;
+            }
+            
             if (result.success) {
                 showSuccessSlide();
             } else {
-                showErrorSlide();
+                console.error('Submission failed:', result);
+                showErrorSlide(result.message || 'Submission failed');
             }
         } catch (error) {
             console.error('Form submission error:', error);
@@ -296,7 +318,7 @@
                 loadingSlide.remove();
             }
             
-            showErrorSlide();
+            showErrorSlide(error.message || 'Network error');
         }
     }
 
@@ -351,15 +373,18 @@
     }
 
     // Show error slide
-    function showErrorSlide() {
+    function showErrorSlide(errorMessage = '') {
         const errorDiv = document.createElement('div');
         errorDiv.className = 'form-slide active success-slide';
+        
+        const errorDetails = errorMessage ? `<p style="font-size: 14px; color: #EF4444; margin-top: 10px;">Error: ${errorMessage}</p>` : '';
         
         errorDiv.innerHTML = `
             <div class="slide-content">
                 <span class="slide-emoji">😔</span>
                 <h3>Oops! Something went wrong</h3>
                 <p>We couldn't submit your inquiry. Please try again or contact us directly at info@themanagementgurus.com</p>
+                ${errorDetails}
                 <button class="btn btn-primary" onclick="location.reload()">Try Again</button>
             </div>
         `;

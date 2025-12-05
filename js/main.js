@@ -323,3 +323,31 @@
     // Initialize
     updateCollegeCarousel();
 })();
+
+
+// FAQ Accordion
+(function() {
+    'use strict';
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        if (question) {
+            question.addEventListener('click', () => {
+                // Close other open items in the same category (optional)
+                const category = item.closest('.faq-category');
+                const otherItems = category.querySelectorAll('.faq-item');
+                otherItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
+})();

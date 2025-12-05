@@ -46,10 +46,12 @@ function validateFormData($data) {
         $errors['email'] = 'Email must be less than 150 characters';
     }
 
-    // Phone validation (10-15 digits)
+    // Phone validation (exactly 10 digits for Indian mobile)
     $phone = preg_replace('/[^0-9]/', '', $data['phone']);
-    if (empty($phone) || strlen($phone) < 10 || strlen($phone) > 15) {
-        $errors['phone'] = 'Please enter a valid phone number (10-15 digits)';
+    if (empty($phone) || strlen($phone) !== 10) {
+        $errors['phone'] = 'Please enter a valid 10-digit phone number';
+    } elseif ($phone[0] < '6' || $phone[0] > '9') {
+        $errors['phone'] = 'Phone number should start with 6, 7, 8, or 9';
     }
 
     // Message validation (optional but max 1000 chars)
@@ -156,10 +158,14 @@ try {
         'message' => sanitizeInput($_POST['message'] ?? '')
     ];
 
+    // Log received data for debugging
+    error_log("Form submission received: " . json_encode($formData));
+
     // Validate form data
     $errors = validateFormData($formData);
     
     if (!empty($errors)) {
+        error_log("Validation errors: " . json_encode($errors));
         http_response_code(400);
         echo json_encode([
             'success' => false,
@@ -170,14 +176,25 @@ try {
     }
 
     // Get database connection
-    $db = Database::getInstance();
-    $pdo = $db->getConnection();
+    try {
+        $db = Database::getInstance();
+        $pdo = $db->getConnection();
+    } catch (Exception $dbError) {
+        error_log("Database connection error: " . $dbError->getMessage());
+        http_response_code(500);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Database connection failed. Please try again later.'
+        ]);
+        exit;
+    }
 
     // Get client IP
     $clientIP = getClientIP();
 
     // Check rate limiting
     if (!checkRateLimit($pdo, $clientIP)) {
+        error_log("Rate limit exceeded for IP: " . $clientIP);
         http_response_code(429);
         echo json_encode([
             'success' => false,
@@ -188,8 +205,10 @@ try {
 
     // Save to database
     if (!saveInquiry($pdo, $formData, $clientIP)) {
-        throw new Exception('Failed to save inquiry');
+        throw new Exception('Failed to save inquiry to database');
     }
+
+    error_log("Inquiry saved successfully for: " . $formData['email']);
 
     // Send email notification (async-like, don't wait for result)
     sendEmailNotification($formData);
@@ -202,10 +221,12 @@ try {
 
 } catch (Exception $e) {
     error_log("Inquiry submission error: " . $e->getMessage());
+    error_log("Stack trace: " . $e->getTraceAsString());
     
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'message' => 'Something went wrong. Please try again later.'
+        'message' => 'Something went wrong. Please try again later.',
+        'error' => ENVIRONMENT === 'development' ? $e->getMessage() : null
     ]);
 }

@@ -19,8 +19,8 @@
     .roadmap-stages { grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
     .timeline-line { display: none; }
     .colleges-carousel-wrapper { gap: var(--space-md); }
-    .college-card { flex: 0 0 calc(50% - var(--space-lg)); min-height: 420px; }
-    .college-logo { width: 200px; height: 200px; }
+    .college-card { flex: 0 0 calc(50% - var(--space-lg)); }
+    .college-logo { height: 240px; }
     .testimonial-card { flex: 0 0 calc(50% - var(--space-lg) / 2); }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
     .decorative-circle { display: none; }
@@ -86,8 +86,8 @@
     /* Colleges */
     .colleges-carousel-wrapper { flex-direction: column; gap: var(--space-md); }
     .carousel-btn { display: none; }
-    .college-card { flex: 0 0 100%; padding: var(--space-lg); min-height: 400px; }
-    .college-logo { width: 180px; height: 180px; margin-bottom: var(--space-md); }
+    .college-card { flex: 0 0 100%; }
+    .college-logo { height: 220px; }
     .colleges-track { gap: var(--space-lg); }
     .college-card h4 { font-size: 14px; }
     .college-card p { font-size: 11px; }
@@ -130,8 +130,8 @@
     .hero-illustration { max-width: 250px; }
     .about-illustration { max-width: 240px; }
     .feature-item { flex-direction: column; text-align: center; }
-    .college-card { padding: var(--space-md); min-height: 350px; }
-    .college-logo { width: 150px; height: 150px; }
+    .college-card { }
+    .college-logo { height: 200px; }
     .college-card h4 { font-size: 12px; }
     .college-card p { font-size: 10px; display: none; }
     .nav-link { padding: 8px 10px; font-size: 10px; }
