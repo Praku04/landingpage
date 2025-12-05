@@ -52,12 +52,33 @@
     .hero-shapes .shape { width: 200px !important; height: 200px !important; filter: blur(40px); opacity: 0.25; }
     .decorative-circle { display: none; }
     
-    /* Bottom Nav */
-    .bottom-nav { bottom: var(--space-sm); left: var(--space-sm); right: var(--space-sm); transform: none; max-width: none; width: auto; }
-    .bottom-nav-container { padding: var(--space-xs) var(--space-sm); gap: 2px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; flex-wrap: nowrap; }
+    /* Bottom Nav - Centered and Scrollable on Mobile */
+    .bottom-nav { 
+        bottom: var(--space-sm); 
+        left: 50%; 
+        transform: translateX(-50%);
+        width: calc(100% - 32px);
+        max-width: 100%;
+    }
+    .bottom-nav-container { 
+        padding: var(--space-xs) var(--space-sm); 
+        gap: 2px; 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        scrollbar-width: none; 
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        scroll-snap-type: x mandatory;
+    }
     .bottom-nav-container::-webkit-scrollbar { display: none; }
     .bottom-nav-container::before { display: none; }
-    .nav-link { padding: var(--space-sm) var(--space-md); font-size: 11px; flex-shrink: 0; border-radius: 20px; }
+    .nav-link { 
+        padding: var(--space-sm) var(--space-md); 
+        font-size: 11px; 
+        flex-shrink: 0; 
+        border-radius: 20px;
+        scroll-snap-align: center;
+    }
     
     /* About */
     .about-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
@@ -130,11 +151,10 @@
     .hero-illustration { max-width: 250px; }
     .about-illustration { max-width: 240px; }
     .feature-item { flex-direction: column; text-align: center; }
-    .college-card { }
     .college-logo { height: 200px; }
     .college-card h4 { font-size: 12px; }
     .college-card p { font-size: 10px; display: none; }
-    .nav-link { padding: 8px 10px; font-size: 10px; }
+    .nav-link { padding: 8px 12px; font-size: 10px; white-space: nowrap; }
     .modal-content { margin: var(--space-xs); }
     .modal-header { padding: var(--space-lg) var(--space-md) var(--space-sm); }
     .modal-header::before { font-size: 28px; }

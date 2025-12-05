@@ -52,6 +52,13 @@
                     block: 'start'
                 });
                 setActiveNav(targetId);
+                
+                // Scroll the clicked nav item into view (for mobile horizontal scroll)
+                link.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
             }
         });
     });
