@@ -137,7 +137,6 @@
         
         slideDiv.innerHTML = `
             <div class="slide-content">
-                <span class="slide-number">Question ${stepIndex + 1} of ${steps.length}</span>
                 <span class="slide-emoji">${step.emoji}</span>
                 <h2 class="slide-question">${questionText}</h2>
                 <div class="slide-input-container">
