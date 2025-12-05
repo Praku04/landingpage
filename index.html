@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Management Gurus - Expert mock interviews, interview preparation, and placement assistance for top colleges and companies.">
+    <title>The Management Gurus | Mock Interviews & Placement Assistance</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Your Career Partner</span>
+                <h1 class="hero-title">
+                    Build Your <span class="gradient-text">Career</span> With
+                    <span class="text-accent">The Management Gurus</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Expert mock interviews, interview preparation, and placement assistance 
+                    to help you land positions at top colleges and companies.
+                </p>
+                <div class="hero-services">
+                    <span>Mock Interviews</span>
+                    <span class="dot">•</span>
+                    <span>Interview Prep</span>
+                    <span class="dot">•</span>
+                    <span>Placement Assistance</span>
+                </div>
+                <button class="btn btn-primary btn-lg open-modal" data-modal="inquiry-modal">
+                    Enquire Now
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-grid">
+                    <!-- Main Hero Image -->
+                    <div class="hero-main-image">
+                        <img src="images/hero/hero.png" alt="Career Success" class="main-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                    
+                    <!-- Floating Student Images -->
+                    <div class="hero-floating-images">
+                        <div class="floating-img floating-img-1">
+                            <img src="images/hero/1668790630107.jpeg" alt="Student Success Story">
+                            <div class="floating-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>Placed</span>
+                            </div>
+                        </div>
+                        <div class="floating-img floating-img-2">
+                            <img src="images/hero/Screenshot_20200216-123516.png" alt="Student Success Story">
+                            <div class="floating-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>Placed</span>
+                            </div>
+                        </div>
+                        <div class="floating-img floating-img-3">
+                            <img src="images/hero/1748776971244.jpeg" alt="Student Success Story">
+                            <div class="floating-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                <span>Placed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive Stats Cards -->
+                    <div class="hero-stats">
+                        <div class="stat-card stat-card-animated">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Students Placed</span>
+                        </div>
+                        <div class="stat-card stat-card-animated">
+                            <div class="stat-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                </svg>
+                            </div>
+                            <span class="stat-number" data-target="20">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Partner Companies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-badge">About Us</span>
+                    <h2>Our Vision: Bridging the Gap Between <span class="text-accent">Academia & Industry</span></h2>
+                    <p class="about-lead">
+                        At The Management Gurus, we believe every student deserves the opportunity to succeed. 
+                        Our mission is to bridge the gap between academic knowledge and industry requirements, 
+                        preparing you for the real-world challenges ahead.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Bridge the Skills Gap</h4>
+                                <p>We identify and fill the gap between what you learn and what industries need.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Industry-Ready Training</h4>
+                                <p>Comprehensive training programs designed by industry experts.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Top Company Connections</h4>
+                                <p>Direct connections with leading companies for placement opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h4>End-to-End Support</h4>
+                                <p>From internship selection to final placement, we're with you every step.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-illustration">
+                        <!-- Bridge/Connection Illustration -->
+                        <svg viewBox="0 0 400 450" fill="none" xmlns="http://www.w3.org/2000/svg" class="illustration-about">
+                            <!-- Background circles -->
+                            <circle cx="200" cy="225" r="180" fill="url(#aboutGrad1)" opacity="0.08"/>
+                            <circle cx="320" cy="100" r="80" fill="#10B981" opacity="0.1"/>
+                            <circle cx="80" cy="350" r="60" fill="#FBBF24" opacity="0.1"/>
+                            
+                            <!-- Bridge Structure -->
+                            <path d="M50 280 Q200 200 350 280" stroke="#4F46E5" stroke-width="8" fill="none" stroke-linecap="round"/>
+                            <path d="M50 280 Q200 220 350 280" stroke="#818CF8" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="10 5"/>
+                            
+                            <!-- Left Building (Academia) -->
+                            <rect x="30" y="200" width="80" height="120" rx="8" fill="white" filter="url(#aboutShadow)"/>
+                            <rect x="40" y="210" width="60" height="40" rx="4" fill="#4F46E5" opacity="0.1"/>
+                            <rect x="50" y="220" width="15" height="20" rx="2" fill="#4F46E5"/>
+                            <rect x="75" y="220" width="15" height="20" rx="2" fill="#4F46E5"/>
+                            <rect x="50" y="260" width="40" height="50" rx="4" fill="#E5E7EB"/>
+                            <circle cx="70" cy="285" r="8" fill="#4F46E5"/>
+                            <text x="70" y="340" text-anchor="middle" fill="#6B7280" font-size="10" font-weight="600">ACADEMIA</text>
+                            
+                            <!-- Right Building (Industry) -->
+                            <rect x="290" y="180" width="80" height="140" rx="8" fill="white" filter="url(#aboutShadow)"/>
+                            <rect x="300" y="190" width="60" height="30" rx="4" fill="#10B981" opacity="0.2"/>
+                            <rect x="310" y="230" width="20" height="25" rx="2" fill="#10B981"/>
+                            <rect x="340" y="230" width="20" height="25" rx="2" fill="#10B981"/>
+                            <rect x="310" y="265" width="20" height="25" rx="2" fill="#10B981"/>
+                            <rect x="340" y="265" width="20" height="25" rx="2" fill="#10B981"/>
+                            <text x="330" y="340" text-anchor="middle" fill="#6B7280" font-size="10" font-weight="600">INDUSTRY</text>
+                            
+                            <!-- Person on bridge -->
+                            <g transform="translate(180, 210)">
+                                <circle cx="20" cy="0" r="18" fill="#FBBF24"/>
+                                <circle cx="20" cy="-5" r="14" fill="#F59E0B"/>
+                                <circle cx="15" cy="-8" r="2.5" fill="#1F2937"/>
+                                <circle cx="25" cy="-8" r="2.5" fill="#1F2937"/>
+                                <path d="M16 2 Q20 6 24 2" stroke="#1F2937" stroke-width="1.5" fill="none"/>
+                                <rect x="8" y="18" width="24" height="35" rx="6" fill="#4F46E5"/>
+                                <rect x="0" y="25" width="12" height="8" rx="4" fill="#FBBF24" transform="rotate(-30 0 25)"/>
+                                <rect x="28" y="25" width="12" height="8" rx="4" fill="#FBBF24" transform="rotate(30 40 25)"/>
+                            </g>
+                            
+                            <!-- Floating skill badges -->
+                            <g class="float-animation">
+                                <rect x="130" y="80" width="70" height="30" rx="15" fill="white" filter="url(#aboutShadow)"/>
+                                <text x="165" y="100" text-anchor="middle" fill="#4F46E5" font-size="11" font-weight="600">Skills</text>
+                            </g>
+                            
+                            <g class="float-animation" style="animation-delay: 0.3s">
+                                <rect x="200" y="100" width="80" height="30" rx="15" fill="white" filter="url(#aboutShadow)"/>
+                                <text x="240" y="120" text-anchor="middle" fill="#10B981" font-size="11" font-weight="600">Training</text>
+                            </g>
+                            
+                            <g class="float-animation" style="animation-delay: 0.6s">
+                                <rect x="160" y="130" width="80" height="30" rx="15" fill="white" filter="url(#aboutShadow)"/>
+                                <text x="200" y="150" text-anchor="middle" fill="#FBBF24" font-size="11" font-weight="600">Growth</text>
+                            </g>
+                            
+                            <!-- Connection arrows -->
+                            <path d="M110 250 L170 235" stroke="#4F46E5" stroke-width="2" stroke-dasharray="4 2" marker-end="url(#arrowhead)"/>
+                            <path d="M230 235 L290 250" stroke="#10B981" stroke-width="2" stroke-dasharray="4 2" marker-end="url(#arrowhead2)"/>
+                            
+                            <!-- Decorative elements -->
+                            <circle cx="50" cy="380" r="5" fill="#4F46E5" opacity="0.4"/>
+                            <circle cx="70" cy="400" r="3" fill="#10B981" opacity="0.4"/>
+                            <circle cx="350" cy="380" r="4" fill="#FBBF24" opacity="0.4"/>
+                            <circle cx="330" cy="400" r="6" fill="#4F46E5" opacity="0.3"/>
+                            
+                            <defs>
+                                <linearGradient id="aboutGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#4F46E5"/>
+                                    <stop offset="100%" stop-color="#10B981"/>
+                                </linearGradient>
+                                <filter id="aboutShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.1"/>
+                                </filter>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#4F46E5"/>
+                                </marker>
+                                <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="about-accent-card">
+                        <span class="accent-number">10+</span>
+                        <span class="accent-text">Years of Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap/Modules Section -->
+    <section id="roadmap" class="section roadmap">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2>Your Journey to <span class="gradient-text">Success</span></h2>
+                <p>From internship selection to final placement — all at one place. Follow our proven roadmap to land your dream position.</p>
+            </div>
+            <div class="roadmap-timeline">
+                <div class="timeline-line"></div>
+                <div class="roadmap-stages">
+                    <div class="stage-card">
+                        <div class="stage-number">1</div>
+                        <div class="stage-illustration">
+                            <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="50" r="40" fill="#4F46E5" opacity="0.1"/>
+                                <rect x="35" y="30" width="50" height="40" rx="4" fill="white" stroke="#4F46E5" stroke-width="2"/>
+                                <circle cx="60" cy="45" r="8" fill="#FBBF24"/>
+                                <rect x="50" y="55" width="20" height="3" rx="1" fill="#E5E7EB"/>
+                                <circle cx="85" cy="25" r="12" fill="#10B981" opacity="0.2"/>
+                                <path d="M80 25 L85 20 L90 25 L85 30 Z" fill="#10B981"/>
+                                <circle cx="30" cy="70" r="8" fill="#4F46E5" opacity="0.2"/>
+                                <path d="M27 70 L30 67 L33 70 L30 73 Z" fill="#4F46E5"/>
+                            </svg>
+                        </div>
+                        <h3>Internship Selection</h3>
+                        <p>We help you identify and secure the right internship opportunities that align with your career goals.</p>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-number">2</div>
+                        <div class="stage-illustration">
+                            <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="50" r="40" fill="#10B981" opacity="0.1"/>
+                                <rect x="30" y="25" width="25" height="35" rx="3" fill="white" stroke="#4F46E5" stroke-width="2"/>
+                                <rect x="35" y="32" width="15" height="3" rx="1" fill="#4F46E5"/>
+                                <rect x="35" y="38" width="12" height="2" rx="1" fill="#E5E7EB"/>
+                                <rect x="35" y="43" width="15" height="2" rx="1" fill="#E5E7EB"/>
+                                <rect x="35" y="48" width="10" height="2" rx="1" fill="#E5E7EB"/>
+                                <rect x="65" y="25" width="25" height="35" rx="3" fill="white" stroke="#10B981" stroke-width="2"/>
+                                <rect x="70" y="32" width="15" height="3" rx="1" fill="#10B981"/>
+                                <rect x="70" y="38" width="12" height="2" rx="1" fill="#E5E7EB"/>
+                                <rect x="70" y="43" width="15" height="2" rx="1" fill="#E5E7EB"/>
+                                <circle cx="60" cy="75" r="12" fill="#FBBF24"/>
+                                <path d="M55 75 L58 78 L65 71" stroke="white" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3>Interview Preparation</h3>
+                        <p>Comprehensive training on technical skills, soft skills, and industry-specific knowledge.</p>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-number">3</div>
+                        <div class="stage-illustration">
+                            <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="50" r="40" fill="#FBBF24" opacity="0.1"/>
+                                <circle cx="40" cy="40" r="12" fill="#FBBF24"/>
+                                <circle cx="40" cy="37" r="8" fill="#F59E0B"/>
+                                <rect x="32" y="52" width="16" height="20" rx="4" fill="#4F46E5"/>
+                                <circle cx="80" cy="40" r="12" fill="#10B981" opacity="0.3"/>
+                                <circle cx="80" cy="37" r="8" fill="#10B981"/>
+                                <rect x="72" y="52" width="16" height="20" rx="4" fill="#10B981"/>
+                                <rect x="50" y="45" width="20" height="12" rx="2" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                                <path d="M53 51 L57 55 L67 48" stroke="#10B981" stroke-width="2" fill="none"/>
+                                <circle cx="60" cy="82" r="8" fill="#4F46E5" opacity="0.2"/>
+                                <rect x="56" y="78" width="8" height="8" rx="1" fill="#4F46E5"/>
+                            </svg>
+                        </div>
+                        <h3>Mock Interviews</h3>
+                        <p>Practice with real interview scenarios conducted by industry professionals to build confidence.</p>
+                    </div>
+                    <div class="stage-card">
+                        <div class="stage-number">4</div>
+                        <div class="stage-illustration">
+                            <svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="50" r="40" fill="#10B981" opacity="0.15"/>
+                                <rect x="35" y="30" width="50" height="35" rx="4" fill="white" stroke="#10B981" stroke-width="2"/>
+                                <rect x="42" y="38" width="36" height="4" rx="2" fill="#10B981"/>
+                                <rect x="42" y="46" width="28" height="3" rx="1" fill="#E5E7EB"/>
+                                <rect x="42" y="52" width="32" height="3" rx="1" fill="#E5E7EB"/>
+                                <circle cx="60" cy="78" r="15" fill="#FBBF24"/>
+                                <path d="M52 78 L58 84 L70 72" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+                                <circle cx="90" cy="25" r="10" fill="#4F46E5" opacity="0.2"/>
+                                <path d="M86 25 L90 21 L94 25 L90 29 Z" fill="#4F46E5"/>
+                                <circle cx="25" cy="60" r="8" fill="#FBBF24" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <h3>Final Placement</h3>
+                        <p>Get placed in top companies with our extensive network and dedicated placement support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-cta">
+                <p class="cta-text">All at One Place — Your Complete Career Solution</p>
+                <button class="btn btn-primary open-modal" data-modal="inquiry-modal">Start Your Journey</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2>What Our <span class="gradient-text">Students</span> Say</h2>
+                <p>Hear from students who transformed their careers with The Management Gurus.</p>
+            </div>
+            <div class="testimonials-wrapper">
+                <button class="carousel-btn carousel-prev" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <div class="testimonials-carousel">
+                    <div class="testimonials-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                "The Management Gurus completely transformed my interview skills. The mock interviews were incredibly realistic, and the feedback helped me land my dream job at a top consulting firm."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/hero/1668790630107.jpeg" alt="Pranav">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Pranav Singh</h4>
+                                    <p>Balaji Society,Pune Placed at Cognizant</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                "From internship guidance to final placement, they were with me every step. The personalized attention and industry insights made all the difference in my career journey."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/hero/Screenshot_20200216-123516.png" alt="Priya Gupta">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sakshi Singh</h4>
+                                    <p>SIBM,Pune Placed at Amazon</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-quote">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" opacity="0.2">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="testimonial-text">
+                                "The structured approach to interview preparation was exactly what I needed. The mentors understood the industry requirements and prepared me accordingly. Highly recommended!"
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="images/hero/1748776971244.jpeg" alt="Neha Kotian">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Neha Kotain</h4>
+                                    <p>Indira College, Placed at VConstruct</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-dots">
+                <button class="dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+                <button class="dot" data-index="1" aria-label="Go to testimonial 2"></button>
+                <button class="dot" data-index="2" aria-label="Go to testimonial 3"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tie-up Colleges Section -->
+    <section id="colleges" class="section colleges">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Partners</span>
+                <h2>Tie-up <span class="gradient-text">Colleges</span> & Institutions</h2>
+                <p>We partner with India's premier management institutes to provide the best placement opportunities.</p>
+            </div>
+            <div class="colleges-carousel-wrapper">
+                <button class="carousel-btn carousel-prev-college" aria-label="Previous college">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                
+                <div class="colleges-carousel">
+                    <div class="colleges-track">
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/hero/xlrijam.jpeg" alt="XLRI" onerror="this.src='https://via.placeholder.com/100x100/1e40af/ffffff?text=XLRI'">
+                            </div>
+                            <h4>XLRI Jamshedpur</h4>
+                            <p>Xavier School of Management</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/sppu.jpeg" alt="SPPU" onerror="this.src='https://via.placeholder.com/100x100/0891b2/ffffff?text=SPPU'">
+                            </div>
+                            <h4>UNIPUNE-SPPU</h4>
+                            <p>Savitribai Phule Pune University</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/coep.jpeg" alt="COEP" onerror="this.src='https://via.placeholder.com/100x100/1e40af/ffffff?text=COEP'">
+                            </div>
+                            <h4>COEP</h4>
+                            <p>College of Engineering Pune</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/1566201296phpwqWVXh.jpeg" alt="SIBM" onerror="this.src='https://via.placeholder.com/100x100/0891b2/ffffff?text=SIBM'">
+                            </div>
+                            <h4>SIBM, Pune</h4>
+                            <p>Symbiosis Institute of Business Management</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/bimm.jpeg" alt="BIMM" onerror="this.src='https://via.placeholder.com/100x100/1e40af/ffffff?text=BIMM'">
+                            </div>
+                            <h4>BIMM</h4>
+                            <p>Balaji Institute of Modern Management</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/1753435833phploDIgy.jpeg" alt="MIT-WPU" onerror="this.src='https://via.placeholder.com/100x100/0891b2/ffffff?text=MIT'">
+                            </div>
+                            <h4>MIT-WPU</h4>
+                            <p>World Peace University</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/riim.jpeg" alt="RIIM" onerror="this.src='https://via.placeholder.com/100x100/1e40af/ffffff?text=RIIM'">
+                            </div>
+                            <h4>RIIM Pune</h4>
+                            <p>RIIM - Arihant Group of Institutes</p>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-logo">
+                                <img src="images/colleges/33.jpg" alt="Indira" onerror="this.src='https://via.placeholder.com/100x100/0891b2/ffffff?text=IGI'">
+                            </div>
+                            <h4>Indira Group of Institutes</h4>
+                            <p>Chanakya Education Society</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-next-college" aria-label="Next college">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-dots colleges-dots">
+                <button class="dot active" data-index="0" aria-label="Go to college 1"></button>
+                <button class="dot" data-index="1" aria-label="Go to college 2"></button>
+                <button class="dot" data-index="2" aria-label="Go to college 3"></button>
+                <button class="dot" data-index="3" aria-label="Go to college 4"></button>
+                <button class="dot" data-index="4" aria-label="Go to college 5"></button>
+                <button class="dot" data-index="5" aria-label="Go to college 6"></button>
+                <button class="dot" data-index="6" aria-label="Go to college 7"></button>
+                <button class="dot" data-index="7" aria-label="Go to college 8"></button>
+            </div>
+            <div class="colleges-cta">
+                <p>And many more premier institutions across India</p>
+                <button class="btn btn-primary open-modal" data-modal="inquiry-modal">Partner With Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (Commented Out)
+    <section id="pricing" class="section pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2>Choose Your Plan</h2>
+                <p>Flexible packages designed to meet your career goals and budget.</p>
+            </div>
+            ... Pricing content removed for now ...
+        </div>
+    </section>
+    -->
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">The Management Gurus</h3>
+                    <p>Your trusted partner in career development. We bridge the gap between academic knowledge and industry requirements.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#roadmap">Our Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#colleges">Partner Colleges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#roadmap">Mock Interviews</a></li>
+                        <li><a href="#roadmap">Interview Prep</a></li>
+                        <li><a href="#roadmap">Placement Assistance</a></li>
+                        <li><a href="#roadmap">Career Counseling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            info@themanagementgurus.com
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            +91 98765 43210
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            Pune, India
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary btn-sm open-modal" data-modal="inquiry-modal">Get in Touch</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Management Gurus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav-container">
+            <a href="#about" class="nav-link" data-section="about">About Us</a>
+            <a href="#roadmap" class="nav-link" data-section="roadmap">Services</a>
+            <a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a>
+            <a href="#colleges" class="nav-link" data-section="colleges">Colleges</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Full-Page Interactive Form -->
+    <div id="inquiry-modal" class="fullpage-form">
+        <!-- Close Button -->
+        <button class="form-close-btn" aria-label="Close form">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        
+        <!-- Progress Indicator -->
+        <div class="form-progress-dots">
+            <div class="progress-dot active" data-step="0"></div>
+            <div class="progress-dot" data-step="1"></div>
+            <div class="progress-dot" data-step="2"></div>
+            <div class="progress-dot" data-step="3"></div>
+            <div class="progress-dot" data-step="4"></div>
+        </div>
+        
+        <!-- Slides Container -->
+        <div class="form-slides-container">
+            <!-- Slide will be dynamically inserted here -->
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="form-navigation">
+            <button type="button" class="nav-btn prev-btn" style="display: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

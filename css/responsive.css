@@ -1,0 +1,173 @@
+/* ========================================
+   Responsive Styles - The Management Gurus
+   ======================================== */
+
+/* Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container { max-width: 1200px; }
+}
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) {
+    :root {
+        --text-h1: 48px;
+        --text-h2: 36px;
+        --section-padding: 60px;
+    }
+    .hero-container { gap: var(--space-2xl); }
+    .hero-illustration { max-width: 400px; }
+    .roadmap-stages { grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); }
+    .timeline-line { display: none; }
+    .colleges-carousel-wrapper { gap: var(--space-md); }
+    .college-card { flex: 0 0 calc(50% - var(--space-lg)); min-height: 420px; }
+    .college-logo { width: 200px; height: 200px; }
+    .testimonial-card { flex: 0 0 calc(50% - var(--space-lg) / 2); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+    .decorative-circle { display: none; }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    :root {
+        --text-h1: 32px;
+        --text-h2: 26px;
+        --text-h3: 20px;
+        --section-padding: 48px;
+        --card-padding: 20px;
+    }
+    .container { padding: 0 var(--space-md); }
+    
+    /* Hero */
+    .hero { min-height: auto; padding-top: 20px; padding-bottom: 120px; }
+    .hero-container { grid-template-columns: 1fr; text-align: center; gap: var(--space-md); }
+    .hero-content { max-width: 100%; }
+    .hero-title { font-size: 28px; line-height: 1.3; margin-bottom: var(--space-sm); }
+    .hero-subtitle { font-size: 16px; margin-bottom: var(--space-sm); }
+    .hero-services { justify-content: center; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-md); }
+    .hero-visual { order: -1; margin-bottom: var(--space-md); margin-top: 0; }
+    .hero-illustration { max-width: 300px; margin: 0 auto; }
+    .hero-stats { justify-content: center; flex-wrap: wrap; gap: var(--space-md); }
+    .stat-card { min-width: 130px; padding: var(--space-md); }
+    .stat-number { font-size: 24px; }
+    .hero-shapes .shape { width: 200px !important; height: 200px !important; filter: blur(40px); opacity: 0.25; }
+    .decorative-circle { display: none; }
+    
+    /* Bottom Nav */
+    .bottom-nav { bottom: var(--space-sm); left: var(--space-sm); right: var(--space-sm); transform: none; max-width: none; width: auto; }
+    .bottom-nav-container { padding: var(--space-xs) var(--space-sm); gap: 2px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; flex-wrap: nowrap; }
+    .bottom-nav-container::-webkit-scrollbar { display: none; }
+    .bottom-nav-container::before { display: none; }
+    .nav-link { padding: var(--space-sm) var(--space-md); font-size: 11px; flex-shrink: 0; border-radius: 20px; }
+    
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+    .about-visual { order: -1; }
+    .about-illustration { max-width: 280px; margin: 0 auto; }
+    .about-accent-card { position: relative; right: auto; bottom: auto; transform: none; margin: var(--space-lg) auto 0; display: inline-block; }
+    .about-features { gap: var(--space-md); }
+    .feature-item { flex-direction: row; text-align: left; }
+    .feature-icon { width: 44px; height: 44px; flex-shrink: 0; }
+    
+    /* Roadmap */
+    .roadmap-stages { grid-template-columns: 1fr; gap: var(--space-lg); }
+    .stage-card { padding: var(--space-lg); }
+    .stage-illustration { height: 100px; }
+    .roadmap-cta, .colleges-cta { padding: var(--space-lg); }
+    .cta-text { font-size: 16px; }
+    
+    /* Testimonials */
+    .testimonials-wrapper { flex-direction: column; }
+    .carousel-btn { display: none; }
+    .testimonial-card { flex: 0 0 100%; padding: var(--space-lg); }
+    .testimonials-track { gap: var(--space-md); }
+    .testimonial-text { font-size: 14px; }
+    .author-avatar { width: 40px; height: 40px; }
+    
+    /* Colleges */
+    .colleges-carousel-wrapper { flex-direction: column; gap: var(--space-md); }
+    .carousel-btn { display: none; }
+    .college-card { flex: 0 0 100%; padding: var(--space-lg); min-height: 400px; }
+    .college-logo { width: 180px; height: 180px; margin-bottom: var(--space-md); }
+    .colleges-track { gap: var(--space-lg); }
+    .college-card h4 { font-size: 14px; }
+    .college-card p { font-size: 11px; }
+    
+    /* Footer */
+    .footer { padding: var(--space-2xl) 0 calc(var(--space-4xl) + 20px); }
+    .footer-grid { grid-template-columns: 1fr; gap: var(--space-xl); text-align: center; }
+    .footer-logo { font-size: 20px; }
+    .footer-social { justify-content: center; }
+    .footer-links ul, .footer-contact ul { align-items: center; }
+    .footer-contact li { justify-content: center; flex-wrap: wrap; }
+    
+    /* Modal */
+    .modal-content { margin: var(--space-sm); max-height: 92vh; border-radius: 20px; }
+    .modal-header { padding: var(--space-xl) var(--space-lg) var(--space-md); }
+    .modal-header::before { font-size: 36px; }
+    .modal-header h3 { font-size: 22px; }
+    .modal-close { top: var(--space-md); right: var(--space-md); width: 36px; height: 36px; }
+    .inquiry-form { padding: 0 var(--space-lg) var(--space-lg); }
+    .form-group { margin-bottom: var(--space-md); }
+    .form-input, .form-textarea { padding: var(--space-md); font-size: 16px; border-radius: 10px; }
+    .form-textarea { min-height: 80px; }
+    .btn-submit { padding: var(--space-md); font-size: 16px; border-radius: 10px; }
+    .btn-lg { padding: var(--space-md) var(--space-lg); font-size: 15px; }
+    .section-header { margin-bottom: var(--space-xl); }
+    .section-header p { font-size: 14px; }
+    .section-badge { font-size: 12px; padding: 6px 12px; }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 479px) {
+    :root { --text-h1: 26px; --text-h2: 22px; --text-h3: 18px; }
+    .hero-title { font-size: 24px; }
+    .hero-services { flex-direction: column; gap: var(--space-xs); }
+    .hero-services .dot { display: none; }
+    .hero-stats { flex-direction: row; gap: var(--space-sm); }
+    .stat-card { flex: 1; min-width: auto; padding: var(--space-sm); }
+    .stat-number { font-size: 20px; }
+    .stat-label { font-size: 10px; }
+    .hero-illustration { max-width: 250px; }
+    .about-illustration { max-width: 240px; }
+    .feature-item { flex-direction: column; text-align: center; }
+    .college-card { padding: var(--space-md); min-height: 350px; }
+    .college-logo { width: 150px; height: 150px; }
+    .college-card h4 { font-size: 12px; }
+    .college-card p { font-size: 10px; display: none; }
+    .nav-link { padding: 8px 10px; font-size: 10px; }
+    .modal-content { margin: var(--space-xs); }
+    .modal-header { padding: var(--space-lg) var(--space-md) var(--space-sm); }
+    .modal-header::before { font-size: 28px; }
+    .modal-header h3 { font-size: 18px; }
+    .inquiry-form { padding: 0 var(--space-md) var(--space-md); }
+    .form-group::before { display: none; }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover, .card:hover, .stage-card:hover, .college-card:hover { transform: none; }
+    .college-card:hover::before { opacity: 0; }
+    .form-input, .form-textarea { min-height: 48px; }
+    .nav-link { min-height: 40px; display: flex; align-items: center; }
+    .btn { min-height: 44px; }
+    .btn-primary:hover, .btn-submit:hover { transform: none; }
+}
+
+/* Landscape Mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero { padding-top: 40px; padding-bottom: 80px; }
+    .hero-illustration { max-width: 200px; }
+    .modal-content { max-height: 85vh; }
+}
+
+/* Print */
+@media print {
+    .bottom-nav, .modal, .btn, .hero-shapes, .decorative-circle { display: none !important; }
+    .hero { min-height: auto; padding: 20px 0; }
+    .section { padding: 20px 0; page-break-inside: avoid; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
