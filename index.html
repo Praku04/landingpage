@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Management Gurus - Expert mock interviews, interview preparation, and placement assistance for top colleges and companies.">
+    <meta name="theme-color" content="#4F46E5">
     <title>The Management Gurus | Mock Interviews & Placement Assistance</title>
     
-    <!-- Google Fonts -->
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     
-    <!-- Stylesheets -->
+    <!-- Critical CSS - Inline for faster first paint -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        :root{--color-primary:#1e40af;--color-text-primary:#111827;--color-background:#FFFFFF}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:system-ui,-apple-system,sans-serif;color:var(--color-text-primary);background:var(--color-background);line-height:1.5}
+        .hero{min-height:100vh;display:flex;align-items:center}
+    </style>
+    
+    <!-- Stylesheets - Async load non-critical CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/animations.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Preload fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"></noscript>
 </head>
 <body>
     <!-- Hero Section -->
@@ -999,9 +1012,9 @@
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/navigation.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Scripts - Deferred for better performance -->
+    <script src="js/navigation.js" defer></script>
+    <script src="js/form.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
