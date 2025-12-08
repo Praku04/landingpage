@@ -19,6 +19,9 @@
         last_name: '',
         email: '',
         phone: '',
+        father_name: '',
+        father_mobile: '',
+        location: '',
         message: ''
     };
 
@@ -75,9 +78,55 @@
                 if (!phoneDigits || phoneDigits.length !== 10) {
                     return 'Please enter a valid 10-digit phone number';
                 }
-                // Check if it starts with valid Indian mobile prefix (6-9)
                 if (phoneDigits[0] < '6' || phoneDigits[0] > '9') {
                     return 'Phone number should start with 6, 7, 8, or 9';
+                }
+                return null;
+            }
+        },
+        {
+            emoji: '👨',
+            question: "What's your father's name? (Optional)",
+            field: 'father_name',
+            type: 'text',
+            placeholder: 'Father\'s name (optional, press Enter to skip)...',
+            validation: (value) => {
+                // Optional field
+                if (value && value.trim().length > 0 && value.trim().length < 2) {
+                    return 'Please enter a valid name (at least 2 characters) or leave empty';
+                }
+                return null;
+            }
+        },
+        {
+            emoji: '📞',
+            question: "Father's mobile number? (Optional)",
+            field: 'father_mobile',
+            type: 'tel',
+            placeholder: 'Father\'s mobile (optional, press Enter to skip)...',
+            validation: (value) => {
+                // Optional field
+                if (value && value.trim().length > 0) {
+                    const phoneDigits = value.replace(/[^0-9]/g, '');
+                    if (phoneDigits.length !== 10) {
+                        return 'Please enter a valid 10-digit phone number or leave empty';
+                    }
+                    if (phoneDigits[0] < '6' || phoneDigits[0] > '9') {
+                        return 'Phone number should start with 6, 7, 8, or 9';
+                    }
+                }
+                return null;
+            }
+        },
+        {
+            emoji: '📍',
+            question: "Where are you located?",
+            field: 'location',
+            type: 'text',
+            placeholder: 'City, State...',
+            validation: (value) => {
+                if (!value || value.trim().length < 2) {
+                    return 'Please enter your location';
                 }
                 return null;
             }
@@ -106,6 +155,9 @@
             last_name: '',
             email: '',
             phone: '',
+            father_name: '',
+            father_mobile: '',
+            location: '',
             message: ''
         };
         
@@ -270,6 +322,9 @@
             submitData.append('full_name', `${formData.first_name} ${formData.last_name}`);
             submitData.append('email', formData.email);
             submitData.append('phone', formData.phone);
+            submitData.append('father_name', formData.father_name || '');
+            submitData.append('father_mobile', formData.father_mobile || '');
+            submitData.append('location', formData.location || '');
             submitData.append('message', formData.message || '');
             
             const response = await fetch('php/submit-inquiry.php', {
