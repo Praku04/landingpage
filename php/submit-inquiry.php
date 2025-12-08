@@ -105,14 +105,17 @@ function checkRateLimit($pdo, $ip) {
  */
 function saveInquiry($pdo, $data, $ip) {
     $stmt = $pdo->prepare("
-        INSERT INTO inquiries (full_name, email, phone, message, ip_address) 
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO inquiries (full_name, email, phone, father_name, father_mobile, location, message, ip_address) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ");
     
     return $stmt->execute([
         $data['full_name'],
         $data['email'],
         preg_replace('/[^0-9]/', '', $data['phone']),
+        $data['father_name'] ?? null,
+        !empty($data['father_mobile']) ? preg_replace('/[^0-9]/', '', $data['father_mobile']) : null,
+        $data['location'] ?? null,
         $data['message'] ?? null,
         $ip
     ]);
@@ -129,6 +132,17 @@ function sendEmailNotification($data) {
     $message .= "Name: " . $data['full_name'] . "\n";
     $message .= "Email: " . $data['email'] . "\n";
     $message .= "Phone: " . $data['phone'] . "\n";
+    
+    if (!empty($data['father_name'])) {
+        $message .= "Father's Name: " . $data['father_name'] . "\n";
+    }
+    if (!empty($data['father_mobile'])) {
+        $message .= "Father's Mobile: " . $data['father_mobile'] . "\n";
+    }
+    if (!empty($data['location'])) {
+        $message .= "Location: " . $data['location'] . "\n";
+    }
+    
     $message .= "Message: " . ($data['message'] ?? 'No message provided') . "\n";
     $message .= "\nSubmitted at: " . date('Y-m-d H:i:s') . "\n";
     
@@ -155,6 +169,9 @@ try {
         'full_name' => sanitizeInput($_POST['full_name'] ?? ''),
         'email' => sanitizeInput($_POST['email'] ?? ''),
         'phone' => sanitizeInput($_POST['phone'] ?? ''),
+        'father_name' => sanitizeInput($_POST['father_name'] ?? ''),
+        'father_mobile' => sanitizeInput($_POST['father_mobile'] ?? ''),
+        'location' => sanitizeInput($_POST['location'] ?? ''),
         'message' => sanitizeInput($_POST['message'] ?? '')
     ];
 

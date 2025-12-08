@@ -1,187 +1,216 @@
-# The Management Gurus - Landing Page
+# TMG - The Management Gurus
 
-A modern, responsive landing page for The Management Gurus - your complete career partner for management students.
+A complete career management platform for students featuring scholarship quizzes, lucky draws, service bookings, and career guidance.
 
-## 🎯 Features
-
-### Core Sections
-- **Hero Section** - Eye-catching introduction with animated elements
-- **About Us** - Company ideology and mission
-- **Career Services** - Redesigned modern service showcase
-- **Roadmap** - Step-by-step journey to success
-- **Testimonials** - Student success stories
-- **Resources** - Podcast series and content
-- **Top Colleges** - Partner institutions
-- **FAQ** - Common questions answered
-- **Contact** - Footer with contact information
-
-### Key Features
-✅ Fully responsive design (Desktop, Tablet, Mobile)
-✅ Interactive form with step-by-step flow
-✅ Mobile-optimized navigation
-✅ Smooth animations and transitions
-✅ Modern UI/UX design
-✅ SEO optimized
-✅ Fast loading performance
-
-## 📱 Mobile Optimizations
-
-- Horizontal scrollable navigation
-- Full-width college cards
-- Responsive form with keyboard handling
-- Touch-friendly interface
-- Optimized images and layouts
-
-## 🎨 Design Highlights
-
-### Services Section (Redesigned)
-- **Featured Services** - Prominent display of main offerings
-- **Compact Grid** - Quick overview of all services
-- **Modern Cards** - Clean, professional design
-- **Call-to-Action** - Direct booking buttons
-
-### Navigation
-- About | Services | Roadmap | Testimonials | Top Colleges | Contact
-- Sticky bottom navigation
-- Active state indicators
-- Smooth scroll behavior
-
-## 🗂️ File Structure
-
-```
-landingpage/
-├── index.html              # Main HTML file
-├── css/
-│   ├── style.css          # Main styles
-│   ├── animations.css     # Animation styles
-│   └── responsive.css     # Responsive styles
-├── js/
-│   ├── main.js           # Main JavaScript
-│   ├── form.js           # Form handling
-│   └── navigation.js     # Navigation logic
-├── php/
-│   ├── config.php        # Database configuration
-│   ├── db-connect.php    # Database connection
-│   ├── submit-inquiry.php # Form submission handler
-│   └── test-form.php     # Form testing tool
-├── database/
-│   ├── schema.sql        # Database schema
-│   └── schema_optional_enhancements.sql
-├── images/               # Image assets
-└── README.md            # This file
-```
-
-## 🚀 Setup Instructions
+## 🚀 Quick Start
 
 ### 1. Database Setup
-```sql
--- Run the schema file
-mysql -u username -p database_name < database/schema.sql
-```
+1. Login to phpMyAdmin on your hosting
+2. Select your database
+3. Import `database/tmg_complete_database.sql`
+4. Done! All tables and initial data will be created
 
 ### 2. Configuration
 Edit `php/config.php` with your database credentials:
 ```php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'your_database');
-define('DB_USER', 'your_username');
-define('DB_PASS', 'your_password');
+$host = 'localhost';
+$dbname = 'your_database_name';
+$username = 'your_db_username';
+$password = 'your_db_password';
 ```
 
-### 3. Test Form
-Visit `php/test-form.php` to test:
-- Database connection
-- Table structure
-- Form submission
-- PHP configuration
+### 3. Default Admin Login
+- **URL:** `admin/login.php`
+- **Username:** admin
+- **Password:** password
+- ⚠️ **Change this immediately after first login!**
 
-### 4. Deploy
-Upload all files to your web server and you're ready to go!
+## 📁 Project Structure
 
-## 📋 Form Features
+```
+tmg/
+├── index.php              # Homepage
+├── about.php              # About page
+├── services.php           # Services page
+├── contact.php            # Contact page
+├── roadmap.php            # Career roadmap
+├── testimonials.php       # Student testimonials
+├── colleges.php           # Partner colleges
+│
+├── auth/                  # Authentication
+│   ├── login.php
+│   └── register.php
+│
+├── dashboard/             # Student Dashboard
+│   ├── index.php         # Dashboard home
+│   ├── profile.php       # Profile management
+│   ├── scholarship.php   # Scholarship quiz
+│   ├── lucky-draw.php    # Lucky draw entry
+│   └── services.php      # Service booking
+│
+├── admin/                 # Admin Panel
+│   ├── login.php         # Admin login
+│   ├── dashboard.php     # Admin dashboard
+│   ├── users.php         # User management
+│   ├── questions.php     # Quiz questions
+│   ├── bookings.php      # Service bookings
+│   └── lucky-draw.php    # Lucky draw management
+│
+├── php/                   # Backend Logic
+│   ├── config.php        # Database config
+│   ├── register_process.php
+│   ├── submit_quiz.php
+│   ├── enter_lucky_draw.php
+│   └── email_config.php
+│
+├── css/                   # Stylesheets
+├── js/                    # JavaScript
+├── images/                # Images
+└── database/              # Database files
+    ├── tmg_complete_database.sql  # Main database file
+    └── README.md          # Database setup guide
+```
 
-- **Step-by-step flow** - One question at a time
-- **Real-time validation** - Instant feedback
-- **Mobile responsive** - Works with keyboard
-- **Error handling** - Clear error messages
-- **Success confirmation** - Beautiful success screen
-- **10-digit phone validation** - Indian mobile numbers
+## ✨ Features
 
-## 🎯 Services Offered
+### For Students
+- 📝 **Registration & Login** - Secure account creation
+- 🎓 **Scholarship Quiz** - 20 CAT questions, earn scholarships
+- 🎰 **Weekly Lucky Draw** - Answer 5 TMG questions to enter
+- 📅 **Service Booking** - Book mock interviews, counselling
+- 👤 **Profile Management** - Update details, upload resume
+- 📊 **Dashboard** - Track quiz scores, bookings, entries
 
-### Featured Services
-1. **Mock Interviews** - Real-world practice with industry experts
-2. **Career Counselling** - Personalized guidance for your career path
+### For Admins
+- 👥 **User Management** - View and manage all users
+- ❓ **Question Bank** - Add/edit quiz questions
+- 📋 **Booking Management** - Handle service requests
+- 🎲 **Lucky Draw** - Manage weekly draws, select winners
+- 📧 **Email System** - Send notifications to users
 
-### Additional Services
-- 📚 CAT & Exam Prep
-- 💼 Internship Support
-- 🎓 College Selection
-- 🤖 AI & Tech Insights
+### Technical Features
+- ✅ Fully responsive (mobile, tablet, desktop)
+- ✅ Modern UI with smooth animations
+- ✅ Email notification system
+- ✅ Secure authentication (password hashing)
+- ✅ SQL injection protection
+- ✅ Form validation (client & server)
+- ✅ Session management
 
-## 🔧 Technical Stack
+## 🎯 Main Pages
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-- **Backend:** PHP 7.4+
-- **Database:** MySQL 5.7+ / MariaDB 10.2+
-- **Design:** Custom CSS with CSS Variables
-- **Icons:** SVG (inline)
-- **Fonts:** Google Fonts (Inter, Poppins)
+### Public Pages
+- **Homepage** - Hero section, stats, call-to-action
+- **About** - Company story, mission, values
+- **Services** - Mock interviews, counselling, placement
+- **Roadmap** - 4-step career journey
+- **Testimonials** - Student success stories
+- **Colleges** - Partner institutions
+- **Contact** - Contact form
 
-## 📱 Browser Support
+### Student Dashboard
+- **Scholarship Quiz** - Take quiz, view results
+- **Lucky Draw** - Answer brand questions, enter draw
+- **Services** - Book career services
+- **Profile** - Manage account details
 
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+### Admin Panel
+- **Dashboard** - Overview statistics
+- **Users** - User list and management
+- **Questions** - Quiz question management
+- **Bookings** - Service booking requests
+- **Lucky Draw** - Weekly draw management
 
-## 🎨 Color Palette
+## 🗄️ Database Tables
 
+1. **users** - Student accounts
+2. **admin_users** - Admin accounts
+3. **quiz_questions** - Scholarship quiz questions (CAT)
+4. **quiz_attempts** - Quiz attempt tracking
+5. **quiz_answers** - Individual answers
+6. **lucky_draw_quiz_questions** - TMG brand questions
+7. **lucky_draw_quiz_attempts** - Lucky draw quiz tracking
+8. **lucky_draw_entries** - Weekly draw entries
+9. **service_bookings** - Service booking requests
+10. **contact_submissions** - Contact form submissions
+11. **email_logs** - Email sending logs
+12. **notifications** - In-app notifications
+13. **email_templates** - Email templates
+
+## 📧 Email Setup
+
+Edit `php/email_config.php` to configure email:
+```php
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_PORT', 587);
+define('SMTP_USERNAME', 'your-email@gmail.com');
+define('SMTP_PASSWORD', 'your-app-password');
+define('FROM_EMAIL', 'noreply@tmg.com');
+define('FROM_NAME', 'The Management Gurus');
+```
+
+See `EMAIL_SETUP_GUIDE.md` for detailed instructions.
+
+## 🔒 Security
+
+- Password hashing with bcrypt
+- Prepared statements (SQL injection prevention)
+- Input sanitization (XSS prevention)
+- Session security
+- CSRF protection on forms
+- File upload validation
+
+## 🎨 Design System
+
+### Colors
 - **Primary:** #1e40af (Blue)
 - **Secondary:** #0891b2 (Cyan)
 - **Success:** #10B981 (Green)
-- **Accent:** #FBBF24 (Yellow)
-- **Text:** #111827 (Dark Gray)
+- **Text:** #111827 (Dark)
 
-## 📊 Performance
+### Typography
+- **Headings:** Poppins
+- **Body:** Inter
 
-- **Lighthouse Score:** 90+
-- **Mobile Friendly:** Yes
-- **Page Load:** < 2s
-- **First Contentful Paint:** < 1s
+## 📱 Browser Support
 
-## 🔒 Security Features
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Mobile browsers
 
-- SQL injection prevention (PDO prepared statements)
-- XSS protection (input sanitization)
-- CSRF protection (form tokens)
-- Rate limiting (prevent spam)
-- Input validation (client & server-side)
+## 🛠️ Requirements
+
+- PHP 7.4 or higher
+- MySQL 5.7+ / MariaDB 10.2+
+- Apache/Nginx web server
+- mod_rewrite enabled (for .htaccess)
 
 ## 📞 Support
 
-For issues or questions:
-- Email: info@themanagementgurus.com
-- Test Form: `php/test-form.php`
-- Check browser console for errors
-- Check server error logs
+For technical issues:
+1. Check `database/README.md` for database setup
+2. Check `EMAIL_SETUP_GUIDE.md` for email configuration
+3. Check `ADMIN_GUIDE.md` for admin panel usage
+4. Review browser console for JavaScript errors
+5. Check server error logs for PHP errors
 
-## 📝 License
+## 📝 Important Files
 
-© 2024 The Management Gurus. All rights reserved.
+- `database/tmg_complete_database.sql` - Complete database
+- `php/config.php` - Database configuration
+- `php/email_config.php` - Email configuration
+- `.htaccess` - URL rewriting rules
 
-## 🎉 Recent Updates
+## 🎉 Version
 
-### Latest Changes (December 2024)
-- ✅ Redesigned services section with modern layout
-- ✅ Removed unnecessary documentation files
-- ✅ Improved mobile responsiveness
-- ✅ Enhanced form keyboard handling
-- ✅ Updated navigation menu
-- ✅ Moved FAQ to end of page
-- ✅ Optimized college cards for mobile
+**Version:** 1.0  
+**Last Updated:** December 2024  
+**Status:** Production Ready
 
 ---
 
-**Built with ❤️ for management students**
+**© 2024 The Management Gurus. All rights reserved.**
+
+Built with ❤️ for management students aspiring to become future leaders.

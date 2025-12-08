@@ -1,0 +1,107 @@
+/* Profile Page Styles */
+
+.profile-container {
+    min-height: 100vh;
+    background: #f8fafc;
+    padding: 40px 20px;
+}
+
+.profile-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-content h1 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.profile-content > p {
+    color: #64748b;
+    margin-bottom: 32px;
+}
+
+.profile-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.form-row-profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-profile label {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.form-group-profile input,
+.form-group-profile select {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-group-profile input:focus,
+.form-group-profile select:focus {
+    outline: none;
+    border-color: #1e40af;
+}
+
+.form-group-profile input:disabled {
+    background: #f8fafc;
+    cursor: not-allowed;
+}
+
+.form-group-profile small {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.current-resume {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.current-resume a {
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.btn-update-profile {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1e40af 0%, #0891b2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+    .profile-card {
+        padding: 24px;
+    }
+    
+    .form-row-profile {
+        grid-template-columns: 1fr;
+    }
+}

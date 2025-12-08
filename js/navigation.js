@@ -39,57 +39,65 @@
         sectionObserver.observe(section);
     });
 
-    // Smooth scroll on nav link click
+    // Smooth scroll on nav link click (only for anchor links, not page links)
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+            const href = link.getAttribute('href');
             
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                setActiveNav(targetId);
+            // Only prevent default for anchor links (starting with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
                 
-                // Scroll the clicked nav item into view (for mobile horizontal scroll)
-                link.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'nearest',
-                    inline: 'center'
-                });
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    setActiveNav(targetId);
+                    
+                    // Scroll the clicked nav item into view (for mobile horizontal scroll)
+                    link.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center'
+                    });
+                }
             }
+            // For page links (.php files), let the default behavior happen
         });
     });
 
-    // Show/hide nav based on scroll position
-    let ticking = false;
+    // Show/hide nav based on scroll position (only if bottomNav exists)
+    if (bottomNav) {
+        let ticking = false;
 
-    function updateNavVisibility() {
-        const heroSection = document.getElementById('hero');
-        const heroBottom = heroSection ? heroSection.offsetHeight : 0;
-        
-        if (window.scrollY > heroBottom * 0.3) {
-            bottomNav.classList.add('visible');
-        } else {
-            bottomNav.classList.remove('visible');
+        function updateNavVisibility() {
+            const heroSection = document.getElementById('hero');
+            const heroBottom = heroSection ? heroSection.offsetHeight : 0;
+            
+            if (window.scrollY > heroBottom * 0.3) {
+                bottomNav.classList.add('visible');
+            } else {
+                bottomNav.classList.remove('visible');
+            }
+            ticking = false;
         }
-        ticking = false;
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateNavVisibility);
+                ticking = true;
+            }
+        });
+
+        // Initial check
+        updateNavVisibility();
     }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            requestAnimationFrame(updateNavVisibility);
-            ticking = true;
-        }
-    });
-
-    // Initial check
-    updateNavVisibility();
     
-    // Set first link as active initially
-    if (navLinks.length > 0) {
+    // Set first link as active initially (only for bottom nav)
+    if (bottomNav && navLinks.length > 0) {
         navLinks[0].classList.add('active');
     }
 })();
