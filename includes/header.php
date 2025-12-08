@@ -47,7 +47,11 @@
         <div class="header-container">
             <!-- Logo -->
             <a href="index.php" class="site-logo">
+<<<<<<< HEAD
                 <div class="logo-icon">TMG</div>
+=======
+                <img src="images/tmg-logo.svg" alt="TMG Logo" class="logo-image">
+>>>>>>> ff11ebdc6636e1f1f10662098bd8cb4f086ee382
                 <div class="logo-text">
                     <span class="main">The Management Gurus</span>
                     <span class="sub">YOUR CAREER PARTNER</span>

@@ -85,10 +85,17 @@
     <?php include 'includes/form-modal.php'; ?>
 
     <!-- Scripts -->
+<<<<<<< HEAD
     <script src="js/image-fallback.js?v=4.0"></script>
     <script src="js/navigation.js?v=4.0" defer></script>
     <script src="js/modern-form.js?v=4.0" defer></script>
     <script src="js/main.js?v=4.0" defer></script>
     <script src="js/mobile-menu.js?v=4.0" defer></script>
+=======
+    <script src="js/navigation.js?v=3.0.5" defer></script>
+    <script src="js/modern-form.js?v=3.0.5" defer></script>
+    <script src="js/main.js?v=3.0.5" defer></script>
+    <script src="js/mobile-menu.js?v=3.0.5" defer></script>
+>>>>>>> ff11ebdc6636e1f1f10662098bd8cb4f086ee382
 </body>
 </html>
